@@ -52,8 +52,8 @@ var salad = new Ingradient("salad", "#589123", "Our salad is fresh and delicious
 
 
 //tworzenie nowych burgerów
-var cheeseBurger = new Burger('Cheese Burger', "white", ["cheese","salad"], 12);
-var hamBurger = new Burger('Hamburger', "dark", ["salad", "ham", "cheese"], 12);
+var cheeseBurger = new Burger('Cheeseburger', "white", ["cheese","salad"], 12);
+var hamBurger = new Burger('Hamburger', "dark", ["salad", "ham", "cheese"], 25);
 
 
 
