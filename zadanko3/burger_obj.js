@@ -1,5 +1,5 @@
 
-var knownIngradients = []; //Ta zmienna przechowywać będzie tabelę, w której znajdować się będą wszystkie składniki (obiekty), z których możemy zrobić burgera
+var knownIngredients = []; //Ta zmienna przechowywać będzie tabelę, w której znajdować się będą wszystkie składniki (obiekty), z których możemy zrobić burgera
 
 var menu = []; //Zmienna, która będzie przechowywać wszystkie burgery, które można u nas zamówić.
 
@@ -20,10 +20,10 @@ var menu = []; //Zmienna, która będzie przechowywać wszystkie burgery, które
     this.indexOfIngradients=[];
     //sprawdzamy czy istnieje taki produkt
     for(var i = 0; i < arrayOfIngredients.length; i++){
-        for(var y=0; y < knownIngradients.length; y++){
-          if(arrayOfIngredients[i]==knownIngradients[y].name){
+        for(var y=0; y < knownIngredients.length; y++){
+          if(arrayOfIngredients[i]==knownIngredients[y].name){
             this.arrayOfIngredients.push(arrayOfIngredients[i]);
-            this.indexOfIngradients.push(y);
+            this.indexOfIngredients.push(y);
           }
         }
       }
@@ -38,17 +38,17 @@ var menu = []; //Zmienna, która będzie przechowywać wszystkie burgery, które
 
  // konstruktor składników
  //Ostatni parametr dodaliśmy wraz z wartością domyślną, jeśli nie podamy żadnych wartości dla niego - zostanie mu przypisana wartość "no"
- var Ingradient = function (name, color, description, allergens = "no"){
+ var Ingredient = function (name, color, description, allergens = "no"){
        this.name = name;
        this.color = color;
        this.description = description;
        this.allergens = allergens;
-       knownIngradients.push(this);
+       knownIngredients.push(this);
  }
 //tworzenie nowych składników
-var cheese = new Ingradient("cheese", "yellow", "Our cheese is made from natural raw milk.", "milk");
-var ham = new Ingradient("ham", "#E69EAA", "The classic Easter ham, shaved from the bone. We cure and smoke it with the bone in, to add flavour and succulence to this ham.");
-var salad = new Ingradient("salad", "#589123", "Our salad is fresh and delicious.");
+var cheese = new Ingredient("cheese", "yellow", "Our cheese is made from natural raw milk.", "milk");
+var ham = new Ingredient("ham", "#E69EAA", "The classic Easter ham, shaved from the bone. We cure and smoke it with the bone in, to add flavour and succulence to this ham.");
+var salad = new Ingredient("salad", "#589123", "Our salad is fresh and delicious.");
 
 
 //tworzenie nowych burgerów
@@ -74,9 +74,9 @@ for( let item of menu){
     let description = "";
   for(let x = 0; x<item.arrayOfIngredients.length; x++){
     index = item.indexOfIngradients[x];
-    ingradients+="<div class = 'ingradient' id='"+ item.name+knownIngradients[index].name +"' style='background: "+knownIngradients[index].color +";'></div>";
-    description+="<div class = 'itemOnList' name='"+ item.name+knownIngradients[index].name +"'><div class = 'descItem'><div class='descName'>"+knownIngradients[index].name+"</div><div class='descText'>";
-    description+= knownIngradients[index].description+"</div><div class='alergens'>Allergens: "+ knownIngradients[index].allergens +"</div></div></div>"
+    ingradients+="<div class = 'ingradient' id='"+ item.name+knownIngredients[index].name +"' style='background: "+knownIngredients[index].color +";'></div>";
+    description+="<div class = 'itemOnList' name='"+ item.name+knownIngredients[index].name +"'><div class = 'descItem'><div class='descName'>"+knownIngredients[index].name+"</div><div class='descText'>";
+    description+= knownIngredients[index].description+"</div><div class='alergens'>Allergens: "+ knownIngredients[index].allergens +"</div></div></div>"
   }
   let visualization = "<div class = 'burgerVis'><div class = 'topBread "+item.typeOfBread+"'></div>"+ingradients+"<div class = 'bottomBread "+item.typeOfBread+"'></div></div>";
   let preparedCode = "<div class = 'product' id = "+item.name+"><div class='name'>"+item.name+"</div><div class='hamburgerBody'>"+visualization +"<div class='producsDescription'><div class='scrolled'>"+ description+"</div></div></div></div>";
