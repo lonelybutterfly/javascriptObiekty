@@ -17,7 +17,7 @@ var menu = []; //Zmienna, która będzie przechowywać wszystkie burgery, które
     }
     this.arrayOfIngredients=[];
     //zmienna pomocnicza - łatwiej będzie nam odnależć obiekty produkty po indeksie
-    this.indexOfIngradients=[];
+    this.indexOfIngredients=[];
     //sprawdzamy czy istnieje taki produkt
     for(var i = 0; i < arrayOfIngredients.length; i++){
         for(var y=0; y < knownIngredients.length; y++){
@@ -73,7 +73,7 @@ for( let item of menu){
     let ingredients = "";
     let description = "";
   for(let x = 0; x<item.arrayOfIngredients.length; x++){
-    index = item.indexOfIngradients[x];
+    index = item.indexOfIngredients[x];
     ingredients+="<div class = 'ingradient' id='"+ item.name+knownIngredients[index].name +"' style='background: "+knownIngredients[index].color +";'></div>";
     description+="<div class = 'itemOnList' name='"+ item.name+knownIngredients[index].name +"'><div class = 'descItem'><div class='descName'>"+knownIngredients[index].name+"</div><div class='descText'>";
     description+= knownIngredients[index].description+"</div><div class='alergens'>Allergens: "+ knownIngredients[index].allergens +"</div></div></div>"
