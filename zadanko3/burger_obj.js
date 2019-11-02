@@ -70,15 +70,15 @@ var hamBurger = new Burger('Hamburger', "dark", ["salad", "ham", "cheese"], 25);
 
 //wyświetlanie burgerów z menu na stronie
 for( let item of menu){
-    let ingradients = "";
+    let ingredients = "";
     let description = "";
   for(let x = 0; x<item.arrayOfIngredients.length; x++){
     index = item.indexOfIngradients[x];
-    ingradients+="<div class = 'ingradient' id='"+ item.name+knownIngredients[index].name +"' style='background: "+knownIngredients[index].color +";'></div>";
+    ingredients+="<div class = 'ingradient' id='"+ item.name+knownIngredients[index].name +"' style='background: "+knownIngredients[index].color +";'></div>";
     description+="<div class = 'itemOnList' name='"+ item.name+knownIngredients[index].name +"'><div class = 'descItem'><div class='descName'>"+knownIngredients[index].name+"</div><div class='descText'>";
     description+= knownIngredients[index].description+"</div><div class='alergens'>Allergens: "+ knownIngredients[index].allergens +"</div></div></div>"
   }
-  let visualization = "<div class = 'burgerVis'><div class = 'topBread "+item.typeOfBread+"'></div>"+ingradients+"<div class = 'bottomBread "+item.typeOfBread+"'></div></div>";
+  let visualization = "<div class = 'burgerVis'><div class = 'topBread "+item.typeOfBread+"'></div>"+ingredients+"<div class = 'bottomBread "+item.typeOfBread+"'></div></div>";
   let preparedCode = "<div class = 'product' id = "+item.name+"><div class='name'>"+item.name+"</div><div class='hamburgerBody'>"+visualization +"<div class='producsDescription'><div class='scrolled'>"+ description+"</div></div></div></div>";
   document.getElementById("burgers").innerHTML+=preparedCode;
 
