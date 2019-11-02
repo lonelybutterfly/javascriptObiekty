@@ -6,4 +6,4 @@ Pomóż nam sprawić, by burgery były jeszcze pyszniejsze a Magda G. turlała s
 1. Dodaj 3 wymyślone przez siebie produkty, których użyjesz, aby stworzyć wyśmienitego Burgera.
 2. Dodaj do menu własnego burgera.
 
-! Swój kod wpisz najlepiej wmiejscu oznaczonym jako "//miejsce na twoj kod" !
+! Swój kod wpisz w pliku burger_obj.js najlepiej wmiejscu oznaczonym jako "//miejsce na twoj kod" !
