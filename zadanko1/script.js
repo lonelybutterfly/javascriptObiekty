@@ -1,4 +1,4 @@
-document.getElementById("signInForm").addEventListener("click", function(event){
+document.getElementById("signInForm").addEventListener("submit", function(event){
   //zamiast true należy dodać warynek sprawdzający czy inputy są puste
   // PODPOWIEDŹ złap inputy używając getElementById, następnie poszukaj wartości która mogłaby wskazać na to, co zostało wpisane do inputa.
   // PODPOWIEDŹ jeśli input jest pusty to jego wartość == ""
