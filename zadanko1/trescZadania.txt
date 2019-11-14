@@ -1,7 +1,7 @@
 Zadanie 1
 
 W pliku script.js jest funkcja, która ma sprawdzać czy pola -inputy na stronie są puste.
-Jeżeli któreś z pól jest puste - użytkownikowi ma pokazać się komunikat "All fields reqired" oraz wysyłanie formy ma zostać przerwane.
+Jeżeli któreś z pól jest puste - użytkownikowi ma pokazać się komunikat "All fields are reqired" oraz wysyłanie formy ma zostać przerwane.
 
 Twoje zadanie
 - Dodaj do ifa warunki, które sprawdzą czy inputy nie są puste.
